@@ -1,9 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
-import UserInput from '/UserInput/UserInput';
+import UserInput from './UserInput/UserInput'
 import UserOutput from './UserOutput/UserOutput';
 
 class App extends Component {
+state = {
+  username: "Traci 'the Bold'"
+}
+
+
+
+userNameHandler = (event) => {
+this.setState({username: event.target.value});
+}
+
+
+
   render() {
     return (
       <div className="App">
@@ -21,8 +33,13 @@ class App extends Component {
         </ol>
 
       <div>
-
-
+    <UserInput click = {this.userNameHandler}
+    currentName={this.state.username}/>
+    <UserOutput username = {this.state.username}/>
+      <UserOutput username = "Dan 'the Man'"/>
+      <UserOutput username = "Kelli 'the Belly'"/>
+      <UserOutput username = "Don Diego de la Vega"/>
+      
       </div>
 
       </div>

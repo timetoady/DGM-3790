@@ -1,0 +1,12 @@
+.userOutput {
+ font-style: inherit;
+ display: grid;
+ grid-template-rows: 1fr 1fr;
+ padding: 1rem;
+ color: teal;
+ background-color: black;
+ border: 2px groove #ccc;
+ margin: .2rem auto;
+ max-width: 30vw;
+
+}
